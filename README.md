@@ -9,7 +9,7 @@ Getting local environment up and running
 3. Start Docker with "Docker Quickstart Terminal" link from you Start menu
 4. run commands:
 	- `cd docker`
-	- `dit clone https://github.com/zaveryukha/openui5_demo.git`
+	- `git clone https://github.com/zaveryukha/openui5_demo.git`
 	- `cd openui5_demo`
 	- `docker-compose up -d`
 	- `docker-machine ip` (normally you should see docker IP like this - 192.168.99.100)
