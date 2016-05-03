@@ -1,7 +1,7 @@
 Getting local environment up and running
 
 1. Setup Docker for you platform [(for example Windows)](https://docs.docker.com/engine/installation/windows/).
-	During installation please select/deselect this features:
+	During installation please select/deselect this features (In normal case you need only to setup Docker-Tools. Plese read other topics only for you information):
 	- Docker-Compose
 	- **deselect** Kitematic
 	- Git for Windows
