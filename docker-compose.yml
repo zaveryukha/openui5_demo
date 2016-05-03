@@ -1,0 +1,26 @@
+webdata:
+  image: busybox:latest
+  command: echo webdata
+  volumes:
+   - ./doc_root:/app
+   - ./conf:/bitnami/nginx/conf
+
+nginx:
+  image: bitnami/nginx
+  ports:
+    - "8082:80"
+  volumes_from:
+    - webdata
+  restart: always
+
+#ssh:
+#  image: million12/php-app-ssh:php-70
+#  ports:
+#    - '1124:22'
+#  links:
+#    - nginx:nginx
+#  volumes_from:
+#    - webdata
+#  environment:
+#    IMPORT_GITHUB_PUB_KEYS: zaveryukha
+#  restart: always
