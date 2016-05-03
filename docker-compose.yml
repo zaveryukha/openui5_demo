@@ -9,6 +9,7 @@ nginx:
   image: bitnami/nginx
   ports:
     - "8082:80"
-  volumes_from:
-    - webdata
+  volumes:
+   - ./doc_root:/app
+   - ./conf:/bitnami/nginx/conf
   restart: always
