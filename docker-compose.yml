@@ -12,4 +12,3 @@ nginx:
   volumes:
    - ./doc_root:/app
    - ./conf:/bitnami/nginx/conf
-  restart: always
