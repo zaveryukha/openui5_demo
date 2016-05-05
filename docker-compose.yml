@@ -8,7 +8,7 @@ webdata:
 nginx:
   image: bitnami/nginx
   ports:
-    - "8082:80"
+    - "8083:80"
   volumes:
    - ./doc_root:/app
    - ./conf:/bitnami/nginx/conf

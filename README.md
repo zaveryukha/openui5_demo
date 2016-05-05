@@ -14,4 +14,4 @@ Getting local environment up and running
 	- `docker-compose up -d`
 	- `docker-machine ip` (normally you should see docker IP like this - 192.168.99.100)
 5. edit you hosts file (c:\windows\system32\drivers\etc\hosts). Add this line to the hosts file: `192.168.99.100	openui5_demo`
-6. Run local application in you web-browser at url: [openui5_demo:8082/step_26](openui5_demo:8082/step_26)
+6. Run local application in you web-browser at url: [http://openui5_demo:8083/step_26](http://openui5_demo:8083/step_26)
