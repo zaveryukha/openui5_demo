@@ -12,3 +12,7 @@ nginx:
   volumes:
    - ./doc_root:/app
    - ./conf:/bitnami/nginx/conf
+  log_driver: "json-file"
+  log_opt:
+    max-size: "20k"
+    max-file: "5"
