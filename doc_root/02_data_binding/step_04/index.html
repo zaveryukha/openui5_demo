@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta charset="utf-8">
+	<title>SAPUI5 Data Binding Tutorial</title>
+  <link rel="apple-touch-icon" sizes="57x57" href="../../../resources/public/icons/apple-touch-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="../../../resources/public/icons/apple-touch-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="../../../resources/public/icons/apple-touch-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="../../../resources/public/icons/apple-touch-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="../../../resources/public/icons/apple-touch-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="../../../resources/public/icons/apple-touch-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="../../../resources/public/icons/apple-touch-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="../../../resources/public/icons/apple-touch-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../../../resources/public/icons/apple-touch-icon-180x180.png">
+  <link rel="icon" type="image/png" href="../../../resources/public/icons/favicon-32x32.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="../../../resources/public/icons/favicon-194x194.png" sizes="194x194">
+  <link rel="icon" type="image/png" href="../../../resources/public/icons/favicon-96x96.png" sizes="96x96">
+  <link rel="icon" type="image/png" href="../../../resources/public/icons/android-chrome-192x192.png" sizes="192x192">
+  <link rel="icon" type="image/png" href="../../../resources/public/icons/favicon-16x16.png" sizes="16x16">
+  <link rel="manifest" href="../../../resources/public/icons/manifest.json">
+  <link rel="mask-icon" href="../../../resources/public/icons/safari-pinned-tab.svg" color="#143e4a">
+  <link rel="shortcut icon" href="../../../resources/public/icons/favicon.ico">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="msapplication-TileImage" content="../../../resources/public/icons/mstile-144x144.png">
+  <meta name="msapplication-config" content="../../../resources/public/icons/browserconfig.xml">
+  <meta name="theme-color" content="#ffffff">
+	<script
+		id="sap-ui-bootstrap"
+		src="../../../resources/sap_library/sap-ui-core.js"
+		data-sap-ui-theme="sap_bluecrystal"
+		data-sap-ui-libs="sap.m"
+		data-sap-ui-compatVersion="edge"
+		data-sap-ui-preload="async"
+		data-sap-ui-resourceroots='{ "t2": "./" }'
+		>
+	</script>
+	<script>
+		// Attach an anonymous function to the SAPUI5 'init' event
+		sap.ui.getCore().attachInit(function () {
+			// Create a JSON model from an object literal
+			var oModel = new sap.ui.model.json.JSONModel({
+				firstName : "Harry",
+        lastName  : "Hawk",
+        enabled   : true,
+        panelHeaderText : "Data Binding Basics"
+			});
+
+			// Assign the model object to the SAPUI5 core
+			sap.ui.getCore().setModel(oModel);
+
+			// Display the XML view called "App"
+      new sap.ui.core.mvc.XMLView({ viewName : "t2.view.App" })
+        .placeAt("content");
+
+		});
+	</script>
+</head>
+<body class="sapUiBody" id="content">
+</body>
+</html>
