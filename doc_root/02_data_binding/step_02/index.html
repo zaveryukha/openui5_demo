@@ -35,15 +35,20 @@
 		>
 	</script>
 	<script>
-		var oModel = new sap.ui.model.json.JSONModel({
-				greetingText : "Hi, my name is Harry Hawk"
+		// Attach an anonymous function to the SAPUI5 'init' event
+		sap.ui.getCore().attachInit(function () {
+			// Create a JSON model from an object literal
+			var oModel = new sap.ui.model.json.JSONModel({
+				greetingText: "Hi, my name is Harry Hawk"
 			});
 
-		sap.ui.getCore().setModel(oModel);
+			// Assign the model object to the SAPUI5 core
+			sap.ui.getCore().setModel(oModel);
+
 			// Create a text UI element that displays a hardcoded text string
 			new sap.m.Text({text: "Hi, my name is Harry Hawk"}).
 				placeAt("content");
-	
+		});
 	</script>
 </head>
 <body class="sapUiBody" id="content">
