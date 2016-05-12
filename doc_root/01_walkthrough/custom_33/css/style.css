@@ -1,0 +1,11 @@
+.myAppT1 .myCustomButton.sapMBtn {
+  margin-right: 0.125rem
+}
+
+html[dir="rtl"] .myAppT1 .myCustomButton.sapMBtn {
+  margin-left: 0.125rem;
+  margin-right: 0
+}
+.myAppT1 .myCustomText {
+  font-weight: bold;
+}
