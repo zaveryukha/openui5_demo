@@ -13,7 +13,7 @@
 				data-sap-ui-compatVersion="edge"
 				data-sap-ui-preload="async"
 				data-sap-ui-resourceroots='{
-					"sap.ui.demo.nav": "./"
+					"t3": "./"
 				}'>
 		</script>
 
@@ -21,14 +21,14 @@
 
 			sap.ui.getCore().attachInit(function () {
 				sap.ui.require([
-					"sap/ui/demo/nav/localService/mockserver",
+					"t3/localService/mockserver",
 					"sap/m/Shell",
 					"sap/ui/core/ComponentContainer"
 				], function (mockserver, Shell, ComponentContainer) {
 					mockserver.init();
 					new Shell({
 						app: new ComponentContainer({
-							name: "sap.ui.demo.nav",
+							name: "t3",
 							height: "100%"
 						})
 					}).placeAt("content");
